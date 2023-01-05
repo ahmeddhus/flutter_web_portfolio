@@ -3,6 +3,7 @@ import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
+import 'package:flutter_web_portfolio/ui/screen/widgets/about_widget.dart';
 import 'package:flutter_web_portfolio/ui/screen/widgets/header_widget.dart';
 import 'package:flutter_web_portfolio/utilities/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -106,6 +107,9 @@ class HomePage extends StatelessWidget {
                   ),
                   SizedBox(width: MediaQuery.of(context).size.width * .15),
                 ],
+              ),
+              const SliverToBoxAdapter(
+                child: AboutWidget(),
               ),
             ],
           ),
@@ -279,6 +283,9 @@ class HomePage extends StatelessWidget {
                   preferredSize: Size.fromHeight(350),
                   child: HeaderWidget(),
                 ),
+              ),
+              const SliverToBoxAdapter(
+                child: AboutWidget(),
               ),
             ],
           ),
