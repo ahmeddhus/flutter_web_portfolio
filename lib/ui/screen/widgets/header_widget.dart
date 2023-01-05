@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/utilities/constants.dart';
@@ -47,10 +48,7 @@ class HeaderWidget extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             ElevatedButton(
-              style: TextButton.styleFrom(
-                backgroundColor: AppColors.yellow,
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-              ),
+              style: AppStyles.elevatedButtonStyle,
               onPressed: _downloadCV,
               child: const Text(
                 'Download CV',
@@ -100,10 +98,7 @@ class HeaderWidget extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               ElevatedButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: AppColors.yellow,
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                ),
+                style: AppStyles.elevatedButtonStyle,
                 onPressed: _downloadCV,
                 child: const Text(
                   'Download CV',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
@@ -95,13 +96,7 @@ class HomePage extends StatelessWidget {
                       const SizedBox(width: 20),
                       TextButton(
                         onPressed: () {},
-                        style: TextButton.styleFrom(
-                          backgroundColor: AppColors.yellow,
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 40,
-                            vertical: 15,
-                          ),
-                        ),
+                        style: AppStyles.textButtonStyle,
                         child: const Text(
                           'Contact Me',
                           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
