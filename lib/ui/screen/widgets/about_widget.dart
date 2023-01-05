@@ -84,7 +84,7 @@ class AboutWidget extends StatelessWidget {
               spacing: 25,
               runSpacing: 25,
               runAlignment: WrapAlignment.spaceBetween,
-              children: [for (int i = 0; i < 6; i++) _buildSkill()],
+              children: DeveloperInfo.skills.map((e) => Chip(label: Text(e))).toList()
             ),
           ],
         ),
@@ -149,13 +149,11 @@ class AboutWidget extends StatelessWidget {
               runSpacing: 10,
               alignment: WrapAlignment.center,
               runAlignment: WrapAlignment.spaceBetween,
-              children: [for (int i = 0; i < 6; i++) _buildSkill()],
+              children: DeveloperInfo.skills.map((e) => Chip(label: Text(e))).toList(),
             ),
           ],
         ),
       ),
     );
   }
-
-  Widget _buildSkill() => const Chip(label: Text('skill.name'));
 }
