@@ -1,4 +1,6 @@
 mixin DeveloperInfo {
+  static const String avatar = 'images/ahmeddhus.jpg';
+
   static const String name = 'Ahmed Hussein';
 
   static const String job = 'Mobile Developer';
