@@ -10,8 +10,16 @@ mixin AppStyles {
     ),
   );
 
-  static final ButtonStyle elevatedButtonStyle = ElevatedButton.styleFrom(
+  static final ButtonStyle elevatedButtonYellowStyle = ElevatedButton.styleFrom(
     backgroundColor: AppColors.yellow,
+    padding: const EdgeInsets.symmetric(
+      horizontal: 30,
+      vertical: 20,
+    ),
+  );
+
+  static final ButtonStyle elevatedButtonBlackStyle = ElevatedButton.styleFrom(
+    backgroundColor: AppColors.black,
     padding: const EdgeInsets.symmetric(
       horizontal: 30,
       vertical: 20,

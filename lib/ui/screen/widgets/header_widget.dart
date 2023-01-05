@@ -3,7 +3,7 @@ import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/utilities/constants.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_web_portfolio/utilities/launcher_methods.dart';
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({Key? key}) : super(key: key);
@@ -48,8 +48,8 @@ class HeaderWidget extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             ElevatedButton(
-              style: AppStyles.elevatedButtonStyle,
-              onPressed: _downloadCV,
+              style: AppStyles.elevatedButtonYellowStyle,
+              onPressed: LauncherMethods.downloadCV,
               child: const Text(
                 'Download CV',
                 style: TextStyle(color: Colors.white),
@@ -98,8 +98,8 @@ class HeaderWidget extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               ElevatedButton(
-                style: AppStyles.elevatedButtonStyle,
-                onPressed: _downloadCV,
+                style: AppStyles.elevatedButtonYellowStyle,
+                onPressed: LauncherMethods.downloadCV,
                 child: const Text(
                   'Download CV',
                   style: TextStyle(color: Colors.white),
@@ -111,9 +111,5 @@ class HeaderWidget extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void _downloadCV() {
-    launchUrl(Uri.parse(DeveloperInfo.cv));
   }
 }
