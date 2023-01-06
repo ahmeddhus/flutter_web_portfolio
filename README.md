@@ -1,3 +1,3 @@
 # flutter_web_portfolio
 
-Flutter web portfolio project
+Flutter web - developer portfolio project
