@@ -32,15 +32,13 @@ mixin DeveloperInfo {
     'iOS development (Swift - Object-C)',
     'Agile',
     'CI/CD',
-    'Version control (Git, SVN)',
+    'Version control (Git, SVN, etc)',
     'OOP',
     'SOLID',
     'Design patterns',
     'Architecture patterns',
-    'State management (Riverpod,Provider, Bloc, etc.',
+    'State management (Riverpod, Provider, Bloc, etc.)',
     'Firebase',
-    'Unit testing',
-    'Integration testing',
-    'Widget testing',
+    'Testing (Unit - Integration - Widget)',
   ];
 }
