@@ -3,8 +3,8 @@ import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
-import 'package:flutter_web_portfolio/ui/screen/widgets/about_widget.dart';
-import 'package:flutter_web_portfolio/ui/screen/widgets/header_widget.dart';
+import 'package:flutter_web_portfolio/ui/screen/sections/about_widget.dart';
+import 'package:flutter_web_portfolio/ui/screen/sections/header_widget.dart';
 import 'package:flutter_web_portfolio/utilities/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                 ),
                 bottom: const PreferredSize(
                   preferredSize: Size.fromHeight(500),
-                  child: HeaderWidget(),
+                  child: HeaderSections(),
                 ),
                 actions: [
                   Row(
@@ -109,7 +109,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               const SliverToBoxAdapter(
-                child: AboutWidget(),
+                child: AboutSections(),
               ),
             ],
           ),
@@ -281,11 +281,11 @@ class HomePage extends StatelessWidget {
                 ),
                 bottom: const PreferredSize(
                   preferredSize: Size.fromHeight(350),
-                  child: HeaderWidget(),
+                  child: HeaderSections(),
                 ),
               ),
               const SliverToBoxAdapter(
-                child: AboutWidget(),
+                child: AboutSections(),
               ),
             ],
           ),

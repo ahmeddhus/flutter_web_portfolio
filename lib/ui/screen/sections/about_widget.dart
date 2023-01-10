@@ -5,8 +5,8 @@ import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/utilities/constants.dart';
 import 'package:flutter_web_portfolio/utilities/launcher_methods.dart';
 
-class AboutWidget extends StatelessWidget {
-  const AboutWidget({Key? key}) : super(key: key);
+class AboutSections extends StatelessWidget {
+  const AboutSections({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
