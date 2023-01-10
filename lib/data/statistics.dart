@@ -1,10 +1,10 @@
 class Statistics {
-  String icon;
+  String iconPath;
   String total;
   String description;
 
   Statistics({
-    required this.icon,
+    required this.iconPath,
     required this.total,
     required this.description,
   });

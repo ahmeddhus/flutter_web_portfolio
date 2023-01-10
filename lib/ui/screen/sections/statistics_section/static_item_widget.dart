@@ -3,12 +3,12 @@ import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 
 class StatisticsItemWidget extends StatelessWidget {
-  final String icon;
+  final String iconPath;
   final String total;
   final String description;
 
   const StatisticsItemWidget({
-    required this.icon,
+    required this.iconPath,
     required this.total,
     required this.description,
     Key? key,
@@ -20,7 +20,7 @@ class StatisticsItemWidget extends StatelessWidget {
       desktopScreen: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          AppIcon(icon, size: 50),
+          AppIcon(iconPath, size: 50),
           const SizedBox(height: 5),
           Text(
             total,
@@ -44,7 +44,7 @@ class StatisticsItemWidget extends StatelessWidget {
       mobileScreen: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          AppIcon(icon, size: 40),
+          AppIcon(iconPath, size: 40),
           const SizedBox(height: 5),
           Text(
             total,

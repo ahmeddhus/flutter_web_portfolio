@@ -10,23 +10,23 @@ class StatisticsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Statistics> statistics = [
       Statistics(
-        icon: 'icons/briefcase.png',
+        iconPath: 'icons/briefcase.png',
         total: '4+',
         description: 'Years of Experience',
       ),
       Statistics(
-        icon: 'icons/menu.png',
+        iconPath: 'icons/menu.png',
         //TODO: Add projects number
         total: '10+',
         description: 'Projects Done',
       ),
       Statistics(
-        icon: 'icons/happy.png',
+        iconPath: 'icons/happy.png',
         total: '50+',
         description: 'Happy Clients',
       ),
       Statistics(
-        icon: 'icons/coffee.png',
+        iconPath: 'icons/coffee.png',
         total: '∞',
         description: 'Coffee Cups',
       ),
@@ -44,7 +44,7 @@ class StatisticsSection extends StatelessWidget {
           children: [
             ...statistics.map(
               (e) => StatisticsItemWidget(
-                icon: e.icon,
+                iconPath: e.iconPath,
                 total: e.total,
                 description: e.description,
               ),
@@ -62,7 +62,7 @@ class StatisticsSection extends StatelessWidget {
           children: [
             ...statistics.map(
               (e) => StatisticsItemWidget(
-                icon: e.icon,
+                iconPath: e.iconPath,
                 total: e.total,
                 description: e.description,
               ),
