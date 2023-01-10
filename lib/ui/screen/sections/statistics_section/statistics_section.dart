@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/data/statistics.dart';
+import 'package:flutter_web_portfolio/models/statistics.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/statistics_section/static_item_widget.dart';
 
