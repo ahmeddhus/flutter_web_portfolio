@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_portfolio/data/developer_capabilities.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
@@ -81,11 +82,10 @@ class AboutSection extends StatelessWidget {
             Container(width: 75, height: 2, color: AppColors.yellow),
             const SizedBox(height: 50),
             Wrap(
-              spacing: 25,
-              runSpacing: 25,
-              runAlignment: WrapAlignment.spaceBetween,
-              children: DeveloperInfo.skills.map((e) => Chip(label: Text(e))).toList()
-            ),
+                spacing: 25,
+                runSpacing: 25,
+                runAlignment: WrapAlignment.spaceBetween,
+                children: DeveloperCapabilities.skills.map((e) => Chip(label: Text(e))).toList()),
           ],
         ),
       ),
@@ -149,7 +149,7 @@ class AboutSection extends StatelessWidget {
               runSpacing: 10,
               alignment: WrapAlignment.center,
               runAlignment: WrapAlignment.spaceBetween,
-              children: DeveloperInfo.skills.map((e) => Chip(label: Text(e))).toList(),
+              children: DeveloperCapabilities.skills.map((e) => Chip(label: Text(e))).toList(),
             ),
           ],
         ),

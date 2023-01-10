@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/models/statistics.dart';
+import 'package:flutter_web_portfolio/data/developer_capabilities.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/statistics_section/static_item_widget.dart';
 
@@ -8,30 +8,6 @@ class StatisticsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Statistics> statistics = [
-      Statistics(
-        iconPath: 'icons/briefcase.png',
-        total: '4+',
-        description: 'Years of Experience',
-      ),
-      Statistics(
-        iconPath: 'icons/menu.png',
-        //TODO: Add projects number
-        total: '10+',
-        description: 'Projects Done',
-      ),
-      Statistics(
-        iconPath: 'icons/happy.png',
-        total: '50+',
-        description: 'Happy Clients',
-      ),
-      Statistics(
-        iconPath: 'icons/coffee.png',
-        total: '∞',
-        description: 'Coffee Cups',
-      ),
-    ];
-
     return ResponsiveWidget(
       desktopScreen: Container(
         height: 400,
@@ -42,7 +18,7 @@ class StatisticsSection extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            ...statistics.map(
+            ...DeveloperCapabilities.statistics.map(
               (e) => StatisticsItemWidget(
                 iconPath: e.iconPath,
                 total: e.total,
@@ -60,7 +36,7 @@ class StatisticsSection extends StatelessWidget {
         ),
         child: Column(
           children: [
-            ...statistics.map(
+            ...DeveloperCapabilities.statistics.map(
               (e) => StatisticsItemWidget(
                 iconPath: e.iconPath,
                 total: e.total,
