@@ -5,6 +5,7 @@ import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/about_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/header_section.dart';
+import 'package:flutter_web_portfolio/ui/screen/sections/statistics_section/statistics_section.dart';
 import 'package:flutter_web_portfolio/utilities/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -108,9 +109,7 @@ class HomePage extends StatelessWidget {
                   SizedBox(width: MediaQuery.of(context).size.width * .15),
                 ],
               ),
-              const SliverToBoxAdapter(
-                child: AboutSection(),
-              ),
+              ..._slivers(),
             ],
           ),
         ),
@@ -284,13 +283,20 @@ class HomePage extends StatelessWidget {
                   child: HeaderSection(),
                 ),
               ),
-              const SliverToBoxAdapter(
-                child: AboutSection(),
-              ),
+              ..._slivers(),
             ],
           ),
         ),
       ),
     );
   }
+
+  List<Widget> _slivers() => [
+        const SliverToBoxAdapter(
+          child: AboutSection(),
+        ),
+        const SliverToBoxAdapter(
+          child: StatisticsSection(),
+        ),
+      ];
 }
