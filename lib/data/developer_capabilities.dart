@@ -49,14 +49,14 @@ mixin DeveloperCapabilities {
       iconPath: 'icons/pencil.png',
       title: 'Plan',
       description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo.',
+          'Understanding how long it’s going to take to perform a specific task and to execute an overall project',
     ),
     WorkingProcess(
       index: '02.',
       iconPath: 'icons/design.png',
       title: 'Design',
       description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo.',
+      'Design and developing new products that breaks big tasks into groups of subtasks to be performed in short sprints.',
     ),
     WorkingProcess(
       index: '03.',
