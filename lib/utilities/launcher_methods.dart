@@ -1,4 +1,4 @@
-import 'package:flutter_web_portfolio/utilities/constants.dart';
+import 'package:flutter_web_portfolio/data/developer_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 mixin LauncherMethods{

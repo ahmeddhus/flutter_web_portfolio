@@ -6,7 +6,7 @@ import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/about_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/header_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/statistics_section/statistics_section.dart';
-import 'package:flutter_web_portfolio/utilities/constants.dart';
+import 'package:flutter_web_portfolio/data/developer_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
