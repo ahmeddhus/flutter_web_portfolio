@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_portfolio/data/developer_capabilities.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
-import 'package:flutter_web_portfolio/utilities/constants.dart';
+import 'package:flutter_web_portfolio/data/developer_info.dart';
 import 'package:flutter_web_portfolio/utilities/launcher_methods.dart';
 
-class AboutWidget extends StatelessWidget {
-  const AboutWidget({Key? key}) : super(key: key);
+class AboutSection extends StatelessWidget {
+  const AboutSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -81,11 +82,10 @@ class AboutWidget extends StatelessWidget {
             Container(width: 75, height: 2, color: AppColors.yellow),
             const SizedBox(height: 50),
             Wrap(
-              spacing: 25,
-              runSpacing: 25,
-              runAlignment: WrapAlignment.spaceBetween,
-              children: DeveloperInfo.skills.map((e) => Chip(label: Text(e))).toList()
-            ),
+                spacing: 25,
+                runSpacing: 25,
+                runAlignment: WrapAlignment.spaceBetween,
+                children: DeveloperCapabilities.skills.map((e) => Chip(label: Text(e))).toList()),
           ],
         ),
       ),
@@ -149,7 +149,7 @@ class AboutWidget extends StatelessWidget {
               runSpacing: 10,
               alignment: WrapAlignment.center,
               runAlignment: WrapAlignment.spaceBetween,
-              children: DeveloperInfo.skills.map((e) => Chip(label: Text(e))).toList(),
+              children: DeveloperCapabilities.skills.map((e) => Chip(label: Text(e))).toList(),
             ),
           ],
         ),

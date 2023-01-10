@@ -24,21 +24,4 @@ mixin DeveloperInfo {
 
   static const String cv =
       'https://drive.google.com/file/d/1wP4-2VSj25AbLu7Sp7a37UjRvFqo48A3/view?usp=sharing';
-
-  static const List<String> skills = <String>[
-    'Flutter',
-    'Dart',
-    'Android development (Java - Kotlin)',
-    'iOS development (Swift - Object-C)',
-    'Agile',
-    'CI/CD',
-    'Version control (Git, SVN, etc)',
-    'OOP',
-    'SOLID',
-    'Design patterns',
-    'Architecture patterns',
-    'State management (Riverpod, Provider, Bloc, etc.)',
-    'Firebase',
-    'Testing (Unit - Integration - Widget)',
-  ];
 }
