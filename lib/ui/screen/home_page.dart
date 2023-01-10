@@ -5,10 +5,11 @@ import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/about_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/header_section.dart';
+import 'package:flutter_web_portfolio/ui/screen/sections/projects_section/projects_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/statistics_section/statistics_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/working_process_section/working_process_section.dart';
 import 'package:flutter_web_portfolio/data/developer_info.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_web_portfolio/utilities/launcher_methods.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -187,7 +188,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () async {
-                        launchUrl(Uri.parse(DeveloperInfo.github));
+                        LauncherMethods.launchUrlFromString(DeveloperInfo.github);
                       },
                       child: const AppIcon(
                         'icons/github.png',
@@ -197,7 +198,7 @@ class HomePage extends StatelessWidget {
                     const SizedBox(width: 20),
                     InkWell(
                       onTap: () {
-                        launchUrl(Uri.parse(DeveloperInfo.linkedin));
+                        LauncherMethods.launchUrlFromString(DeveloperInfo.linkedin);
                       },
                       child: const AppIcon(
                         'icons/linkedin.png',
@@ -207,7 +208,7 @@ class HomePage extends StatelessWidget {
                     const SizedBox(width: 20),
                     InkWell(
                       onTap: () {
-                        launchUrl(Uri.parse(DeveloperInfo.twitter));
+                        LauncherMethods.launchUrlFromString(DeveloperInfo.twitter);
                       },
                       child: const AppIcon(
                         'icons/twitter.png',
@@ -217,7 +218,7 @@ class HomePage extends StatelessWidget {
                     const SizedBox(width: 20),
                     InkWell(
                       onTap: () {
-                        launchUrl(Uri.parse(DeveloperInfo.youtube));
+                        LauncherMethods.launchUrlFromString(DeveloperInfo.youtube);
                       },
                       child: const AppIcon(
                         'icons/youtube.png',
@@ -301,6 +302,9 @@ class HomePage extends StatelessWidget {
         ),
         const SliverToBoxAdapter(
           child: WorkingProcessSection(),
+        ),
+        const SliverToBoxAdapter(
+          child: ProjectsSection(),
         ),
       ];
 }
