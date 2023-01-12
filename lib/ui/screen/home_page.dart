@@ -5,6 +5,7 @@ import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/about_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/contact_us_section/contact_us_sectio.dart';
+import 'package:flutter_web_portfolio/ui/screen/sections/footer_section/footer_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/header_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/projects_section/projects_section.dart';
 import 'package:flutter_web_portfolio/ui/screen/sections/statistics_section/statistics_section.dart';
@@ -309,6 +310,9 @@ class HomePage extends StatelessWidget {
         ),
         const SliverToBoxAdapter(
           child: ContactUsSection(),
+        ),
+        const SliverToBoxAdapter(
+          child: FooterSections(),
         ),
       ];
 }

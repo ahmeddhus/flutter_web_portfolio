@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/data/developer_achievements.dart';
+import 'package:flutter_web_portfolio/data/developer_capabilities.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
@@ -21,7 +21,7 @@ class ProjectsSection extends StatelessWidget {
             const SizedBox(height: 3),
             Container(width: 75, height: 2, color: AppColors.yellow),
             const SizedBox(height: 50),
-            ...DeveloperAchievements.projects.map(
+            ...DeveloperCapabilities.projects.map(
               (p) => ProjectItemWidget(
                 project: p,
               ),
@@ -49,7 +49,7 @@ class ProjectsSection extends StatelessWidget {
             Wrap(
               spacing: 5,
               runSpacing: 5,
-              children: DeveloperAchievements.projects
+              children: DeveloperCapabilities.projects
                   .map(
                     (p) => ProjectItemWidget(
                       project: p,
