@@ -187,7 +187,7 @@ class FooterSections extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Proudly powered by ${DeveloperInfo.description} ©${DateTime.now().year}',
+                  'Proudly powered by ${DeveloperInfo.name} ©${DateTime.now().year}',
                   style: TextStyle(
                     color: AppColors.greyLight!.withOpacity(.75),
                   ),
@@ -374,7 +374,7 @@ class FooterSections extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Text(
-              'Proudly powered by ${DeveloperInfo.description} ©${DateTime.now().year}',
+              'Proudly powered by ${DeveloperInfo.name} ©${DateTime.now().year}',
               style: TextStyle(
                 color: AppColors.greyLight!.withOpacity(.75),
               ),
