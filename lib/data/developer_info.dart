@@ -1,3 +1,5 @@
+import 'package:flutter_web_portfolio/models/contact_info.dart';
+
 mixin DeveloperInfo {
   static const String avatar = 'images/ahmeddhus.jpg';
 
@@ -24,4 +26,22 @@ mixin DeveloperInfo {
 
   static const String cv =
       'https://drive.google.com/file/d/1wP4-2VSj25AbLu7Sp7a37UjRvFqo48A3/view?usp=sharing';
+
+  static final List<ContactInfo> contactInfo = [
+    ContactInfo(
+      imagePath: 'icons/email.png',
+      title: 'Mail Us:',
+      content: DeveloperInfo.mail,
+    ),
+    ContactInfo(
+      imagePath: 'icons/call.png',
+      title: 'Call Us:',
+      content: DeveloperInfo.mobileNumber,
+    ),
+    ContactInfo(
+      imagePath: 'icons/pin.png',
+      title: 'Visit Us:',
+      content: DeveloperInfo.location,
+    ),
+  ];
 }
