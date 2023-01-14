@@ -26,6 +26,8 @@ mixin DeveloperInfo {
 
   static const String twitter = 'https://twitter.com/ahmeddhus';
 
+  static const String medium = 'https://medium.com/@ahmeddhus';
+
   static const String youtube = 'https://www.youtube.com/@groovex7470';
 
   static const String cv =
@@ -44,22 +46,30 @@ mixin DeveloperInfo {
       iconPath: 'icons/twitter.png',
       url: DeveloperInfo.twitter,
     ),
+    Website(
+      iconPath: 'icons/medium.png',
+      url: DeveloperInfo.medium,
+    ),
+    Website(
+      iconPath: 'icons/youtube.png',
+      url: DeveloperInfo.youtube,
+    ),
   ];
 
   static final List<ContactInfo> contactInfo = [
     ContactInfo(
       imagePath: 'icons/email.png',
-      title: 'Mail Us:',
+      title: 'Mail:',
       content: DeveloperInfo.mail,
     ),
     ContactInfo(
       imagePath: 'icons/call.png',
-      title: 'Call Us:',
+      title: 'Call:',
       content: DeveloperInfo.mobileNumber,
     ),
     ContactInfo(
       imagePath: 'icons/pin.png',
-      title: 'Visit Us:',
+      title: 'Visit:',
       content: DeveloperInfo.location,
     ),
   ];
