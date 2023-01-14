@@ -59,17 +59,17 @@ mixin DeveloperInfo {
   static final List<ContactInfo> contactInfo = [
     ContactInfo(
       imagePath: 'icons/email.png',
-      title: 'Mail Us:',
+      title: 'Mail:',
       content: DeveloperInfo.mail,
     ),
     ContactInfo(
       imagePath: 'icons/call.png',
-      title: 'Call Us:',
+      title: 'Call:',
       content: DeveloperInfo.mobileNumber,
     ),
     ContactInfo(
       imagePath: 'icons/pin.png',
-      title: 'Visit Us:',
+      title: 'Visit:',
       content: DeveloperInfo.location,
     ),
   ];
