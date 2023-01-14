@@ -6,7 +6,11 @@ mixin LauncherMethods {
     launchUrlFromString(DeveloperInfo.cv);
   }
 
-  static void launchUrlFromString(String stringUrl) {
-    launchUrl(Uri.parse(stringUrl));
+  static Future<void> launchUrlFromString(String stringUrl) async {
+    if (await canLaunchUrl(Uri.parse(stringUrl))) {
+      await launchUrl(Uri.parse(stringUrl));
+    } else {
+      throw 'Could not launch $stringUrl';
+    }
   }
 }
