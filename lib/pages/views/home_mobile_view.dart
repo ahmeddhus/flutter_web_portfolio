@@ -84,47 +84,20 @@ class HomeMobileView extends StatelessWidget {
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  InkWell(
-                    onTap: () async {
-                      LauncherMethods.launchUrlFromString(DeveloperInfo.github);
-                    },
-                    child: const AppIcon(
-                      'icons/github.png',
-                      color: AppColors.black,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  InkWell(
-                    onTap: () {
-                      LauncherMethods.launchUrlFromString(DeveloperInfo.linkedin);
-                    },
-                    child: const AppIcon(
-                      'icons/linkedin.png',
-                      color: AppColors.black,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  InkWell(
-                    onTap: () {
-                      LauncherMethods.launchUrlFromString(DeveloperInfo.twitter);
-                    },
-                    child: const AppIcon(
-                      'icons/twitter.png',
-                      color: AppColors.black,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  InkWell(
-                    onTap: () {
-                      LauncherMethods.launchUrlFromString(DeveloperInfo.youtube);
-                    },
-                    child: const AppIcon(
-                      'icons/youtube.png',
-                      color: AppColors.black,
-                    ),
-                  ),
-                ],
+                children: DeveloperInfo.websites
+                    .map((e) => InkWell(
+                          onTap: () async {
+                            LauncherMethods.launchUrlFromString(e.url);
+                          },
+                          child: Container(
+                            margin: const EdgeInsets.symmetric(horizontal: 10),
+                            child: AppIcon(
+                              e.iconPath,
+                              color: AppColors.black,
+                            ),
+                          ),
+                        ))
+                    .toList(),
               ),
               const SizedBox(height: 20),
             ],
