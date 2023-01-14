@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/models/project.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
+import 'package:flutter_web_portfolio/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/utilities/launcher_methods.dart';
 
 class FooterProjectItem extends StatelessWidget {

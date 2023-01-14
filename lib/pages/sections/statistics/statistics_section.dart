@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/data/developer_capabilities.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
-import 'package:flutter_web_portfolio/ui/screen/sections/statistics_section/static_item_widget.dart';
+import 'package:flutter_web_portfolio/common_widgets/responsive_widget.dart';
+import 'package:flutter_web_portfolio/pages/sections/statistics/widgets/static_item_widget.dart';
 
 class StatisticsSection extends StatelessWidget {
   const StatisticsSection({Key? key}) : super(key: key);

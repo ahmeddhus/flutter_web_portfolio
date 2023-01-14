@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
+import 'package:flutter_web_portfolio/common_widgets/app_icon.dart';
+import 'package:flutter_web_portfolio/common_widgets/responsive_widget.dart';
 
 class StatisticsItemWidget extends StatelessWidget {
   final String iconPath;

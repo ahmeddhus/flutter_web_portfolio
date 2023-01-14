@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/models/website.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
+import 'package:flutter_web_portfolio/common_widgets/app_icon.dart';
 import 'package:flutter_web_portfolio/utilities/launcher_methods.dart';
 
 class FooterSocialItem extends StatelessWidget {

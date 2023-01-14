@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/data/developer_capabilities.dart';
 import 'package:flutter_web_portfolio/data/developer_info.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
-import 'package:flutter_web_portfolio/ui/screen/sections/footer_section/footer_project_item.dart';
-import 'package:flutter_web_portfolio/ui/screen/sections/footer_section/footer_social_item.dart';
+import 'package:flutter_web_portfolio/common_widgets/responsive_widget.dart';
+import 'package:flutter_web_portfolio/pages/sections/footer/widgets/footer_project_item.dart';
+import 'package:flutter_web_portfolio/pages/sections/footer/widgets/footer_social_item.dart';
 
 class FooterSections extends StatelessWidget {
   const FooterSections({Key? key}) : super(key: key);

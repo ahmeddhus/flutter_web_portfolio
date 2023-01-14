@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/ui/screen/sections/contact_us_section/contact_form_widget.dart';
-import 'package:flutter_web_portfolio/ui/screen/sections/contact_us_section/contact_info_widget.dart';
 import 'package:flutter_web_portfolio/data/developer_info.dart';
+import 'package:flutter_web_portfolio/pages/sections/contact_us/views/contact_form_widget.dart';
+import 'package:flutter_web_portfolio/pages/sections/contact_us/views/contact_info_widget.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
+import 'package:flutter_web_portfolio/common_widgets/responsive_widget.dart';
 
 class ContactUsSection extends StatelessWidget {
   const ContactUsSection({super.key});

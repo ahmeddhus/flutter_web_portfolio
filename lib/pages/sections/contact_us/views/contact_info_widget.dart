@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/app_icon.dart';
+import 'package:flutter_web_portfolio/common_widgets/app_icon.dart';
 
 class ContactInfoWidget extends StatelessWidget {
   final String imagePath;

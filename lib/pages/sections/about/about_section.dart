@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/data/developer_capabilities.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
+import 'package:flutter_web_portfolio/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/data/developer_info.dart';
 import 'package:flutter_web_portfolio/utilities/launcher_methods.dart';
 
@@ -11,11 +11,12 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
     return ResponsiveWidget(
       desktopScreen: Container(
         color: Colors.white,
         padding: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * .15,
+          horizontal: screenWidth * .15,
           vertical: 100,
         ),
         child: Column(
@@ -92,7 +93,7 @@ class AboutSection extends StatelessWidget {
       mobileScreen: Container(
         color: Colors.white,
         padding: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * .15,
+          horizontal: screenWidth * .15,
           vertical: 50,
         ),
         child: Column(

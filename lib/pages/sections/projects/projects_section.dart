@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/data/developer_capabilities.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
-import 'package:flutter_web_portfolio/ui/common_widgets/responsive_widget.dart';
-import 'package:flutter_web_portfolio/ui/screen/sections/projects_section/project_item_widget.dart';
+import 'package:flutter_web_portfolio/common_widgets/responsive_widget.dart';
+import 'package:flutter_web_portfolio/pages/sections/projects/widgets/project_item_widget.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({Key? key}) : super(key: key);
