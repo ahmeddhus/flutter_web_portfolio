@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/common_widgets/responsive_widget.dart';
-import 'package:flutter_web_portfolio/pages/home_page_views/home_desktop_view.dart';
-import 'package:flutter_web_portfolio/pages/home_page_views/home_mobile_view.dart';
+import 'package:flutter_web_portfolio/pages/views/home_desktop_view.dart';
+import 'package:flutter_web_portfolio/pages/views/home_mobile_view.dart';
 import 'package:flutter_web_portfolio/pages/sections/about/about_section.dart';
 import 'package:flutter_web_portfolio/pages/sections/contact_us/contact_us_section.dart';
 import 'package:flutter_web_portfolio/pages/sections/footer/footer_section.dart';
