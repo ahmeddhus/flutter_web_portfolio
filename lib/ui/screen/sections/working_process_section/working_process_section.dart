@@ -68,13 +68,11 @@ class WorkingProcessSection extends StatelessWidget {
             Container(width: 50, height: 2, color: AppColors.yellow),
             const SizedBox(height: 50),
             ...DeveloperCapabilities.workingProcess.map(
-              (e) => Expanded(
-                child: WorkingProcessItemWidget(
-                  index: e.index,
-                  iconPath: e.iconPath,
-                  title: e.title,
-                  description: e.description,
-                ),
+              (e) => WorkingProcessItemWidget(
+                index: e.index,
+                iconPath: e.iconPath,
+                title: e.title,
+                description: e.description,
               ),
             ),
           ],
