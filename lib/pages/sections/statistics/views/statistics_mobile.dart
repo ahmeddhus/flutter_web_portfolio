@@ -16,11 +16,14 @@ class StatisticsMobile extends StatelessWidget {
       child: Column(
         children: [
           ...DeveloperCapabilities.statistics.map(
-                (e) => StatisticsItemWidget(
+                (e) => Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: StatisticsItemWidget(
               iconPath: e.iconPath,
               total: e.total,
               description: e.description,
             ),
+                ),
           ),
         ],
       ),
