@@ -26,6 +26,8 @@ mixin DeveloperInfo {
 
   static const String twitter = 'https://twitter.com/ahmeddhus';
 
+  static const String medium = 'https://medium.com/@ahmeddhus';
+
   static const String youtube = 'https://www.youtube.com/@groovex7470';
 
   static const String cv =
@@ -43,6 +45,14 @@ mixin DeveloperInfo {
     Website(
       iconPath: 'icons/twitter.png',
       url: DeveloperInfo.twitter,
+    ),
+    Website(
+      iconPath: 'icons/medium.png',
+      url: DeveloperInfo.medium,
+    ),
+    Website(
+      iconPath: 'icons/youtube.png',
+      url: DeveloperInfo.youtube,
     ),
   ];
 
