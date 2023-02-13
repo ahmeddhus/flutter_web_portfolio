@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/common_widgets/app_icon.dart';
+import 'package:flutter_web_portfolio/data/web_sections.dart';
+import 'package:flutter_web_portfolio/models/web_section_helper.dart';
 import 'package:flutter_web_portfolio/pages/sections/header/header_section.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
@@ -7,10 +9,7 @@ import 'package:flutter_web_portfolio/data/developer_info.dart';
 import 'package:flutter_web_portfolio/utilities/launcher_methods.dart';
 
 class HomeMobileView extends StatelessWidget {
-  final List<Widget> sections;
-
   const HomeMobileView({
-    required this.sections,
     Key? key,
   }) : super(key: key);
 
@@ -38,45 +37,44 @@ class HomeMobileView extends StatelessWidget {
                 ),
               ),
               const Divider(),
-              ListTile(
-                onTap: () {},
-                title: const Text(
-                  'About Me',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
-              ListTile(
-                onTap: () {},
-                title: const Text(
-                  'Experience',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
-              ListTile(
-                onTap: () {},
-                title: const Text(
-                  'Process',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
-              ListTile(
-                onTap: () {},
-                title: const Text(
-                  'Portfolio',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
+              ...WebSectionsHelper.instance
+                  .sections(showHeaderComponent: true)
+                  .map(
+                    (WebSection e) => ListTile(
+                      onTap: () {
+                        Navigator.pop(context);
+                        Scrollable.ensureVisible(
+                          e.globalKey.currentContext!,
+                          duration: const Duration(seconds: 1),
+                        );
+                      },
+                      title: Text(
+                        e.title,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+              )
+                  .toList(),
               const Divider(),
-              const SizedBox(height: 20),
-              ListTile(
-                title: TextButton(
-                  onPressed: () {},
-                  style: AppStyles.textButtonStyle,
-                  child: const Text(
-                    'Contact Me',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+              const SizedBox(height: 8),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 8),
+                child: ListTile(
+                  title: TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Scrollable.ensureVisible(
+                        WebSectionsHelper.instance.contactUsSectionKey.currentContext!,
+                        duration: const Duration(seconds: 1),
+                      );
+                    },
+                    style: AppStyles.textButtonStyle,
+                    child: const Text(
+                      'Contact Me',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -161,7 +159,12 @@ class HomeMobileView extends StatelessWidget {
                 child: HeaderSection(),
               ),
             ),
-            ...sections,
+            ...WebSectionsHelper.instance.sections().map(
+                  (WebSection e) => SliverToBoxAdapter(
+                    key: e.globalKey,
+                    child: e.widget,
+                  ),
+                ),
           ],
         ),
       ),

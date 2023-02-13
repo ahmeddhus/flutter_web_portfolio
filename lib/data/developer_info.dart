@@ -6,10 +6,10 @@ mixin DeveloperInfo {
 
   static const String name = 'Ahmed Hussein';
 
-  static const String job = 'Flutter Developer';
+  static const String job = 'Software Engineer';
 
   static const String description =
-      'Skilled Flutter developer with a strong foundation in native Android development. Proficient in Java, Kotlin, and Dart, with experience in integrating with RESTful APIs and Agile development methodologies. Passionate about creating intuitive, user-friendly mobile experiences.';
+      'Software engineer with expertise in the Flutter framework and a strong background in Android development plus a proven track record of delivering high-quality software projects. Deep understanding of Object-Oriented Programming (OOP) and design patterns, which enables me to create efficient and scalable solutions for complex problems. My passion for technology and innovation drives me to continuously improve my skills, share my knowledge with the community and stay up-to-date with the latest industry advancements.';
 
   static const String getInTouchMessage =
       'You have an idea, I am here to turn your dream into real digital solution.';

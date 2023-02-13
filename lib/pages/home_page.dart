@@ -2,42 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/common_widgets/responsive_widget.dart';
 import 'package:flutter_web_portfolio/pages/views/home_desktop_view.dart';
 import 'package:flutter_web_portfolio/pages/views/home_mobile_view.dart';
-import 'package:flutter_web_portfolio/pages/sections/about/about_section.dart';
-import 'package:flutter_web_portfolio/pages/sections/contact_us/contact_us_section.dart';
-import 'package:flutter_web_portfolio/pages/sections/footer/footer_section.dart';
-import 'package:flutter_web_portfolio/pages/sections/projects/projects_section.dart';
-import 'package:flutter_web_portfolio/pages/sections/statistics/statistics_section.dart';
-import 'package:flutter_web_portfolio/pages/sections/working_process/working_process_section.dart';
+import 'package:flutter/cupertino.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  List<Widget> _sections() => [
-        const SliverToBoxAdapter(
-          child: AboutSection(),
-        ),
-        const SliverToBoxAdapter(
-          child: StatisticsSection(),
-        ),
-        const SliverToBoxAdapter(
-          child: WorkingProcessSection(),
-        ),
-        const SliverToBoxAdapter(
-          child: ProjectsSection(),
-        ),
-        const SliverToBoxAdapter(
-          child: ContactUsSection(),
-        ),
-        const SliverToBoxAdapter(
-          child: FooterSections(),
-        ),
-      ];
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
 
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return ResponsiveWidget(
-      desktopScreen: HomeDesktopView(sections: _sections()),
-      mobileScreen: HomeMobileView(sections: _sections()),
+    return const ResponsiveWidget(
+      desktopScreen: HomeDesktopView(),
+      mobileScreen: HomeMobileView(),
     );
   }
 }

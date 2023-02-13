@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_portfolio/data/web_sections.dart';
+import 'package:flutter_web_portfolio/models/web_section_helper.dart';
 import 'package:flutter_web_portfolio/pages/sections/header/header_section.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 
 class HomeDesktopView extends StatelessWidget {
-  final List<Widget> sections;
+  const HomeDesktopView({super.key});
 
-  const HomeDesktopView({
-    required this.sections,
-    Key? key,
-  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,49 +62,31 @@ class HomeDesktopView extends StatelessWidget {
               actions: [
                 Row(
                   children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'About Me',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                    ...WebSectionsHelper.instance.sections(showHeaderComponent: true).map(
+                          (WebSection e) => TextButton(
+                            onPressed: () {
+                              Scrollable.ensureVisible(
+                                e.globalKey.currentContext!,
+                                duration: const Duration(seconds: 1),
+                              );
+                            },
+                            child: Text(
+                              e.title,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'Experience',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'Process',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'Portfolio',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
                     const SizedBox(width: 20),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Scrollable.ensureVisible(
+                          WebSectionsHelper.instance.contactUsSectionKey.currentContext!,
+                          duration: const Duration(seconds: 1),
+                        );
+                      },
                       style: AppStyles.textButtonStyle,
                       child: const Text(
                         'Contact Me',
@@ -121,7 +101,12 @@ class HomeDesktopView extends StatelessWidget {
                 SizedBox(width: MediaQuery.of(context).size.width * .15),
               ],
             ),
-            ...sections,
+            ...WebSectionsHelper.instance.sections().map(
+                  (WebSection e) => SliverToBoxAdapter(
+                    key: e.globalKey,
+                    child: e.widget,
+                  ),
+                ),
           ],
         ),
       ),
