@@ -1,4 +1,5 @@
-import 'package:flutter_web_portfolio/models/web_section.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_web_portfolio/models/web_section_helper.dart';
 import 'package:flutter_web_portfolio/pages/sections/about/about_section.dart';
 import 'package:flutter_web_portfolio/pages/sections/contact_us/contact_us_section.dart';
 import 'package:flutter_web_portfolio/pages/sections/footer/footer_section.dart';
@@ -6,45 +7,70 @@ import 'package:flutter_web_portfolio/pages/sections/projects/projects_section.d
 import 'package:flutter_web_portfolio/pages/sections/statistics/statistics_section.dart';
 import 'package:flutter_web_portfolio/pages/sections/working_process/working_process_section.dart';
 
-class WebSections {
-  final bool getHeaderComponent;
+class WebSectionsHelper {
+  WebSectionsHelper._(){
+    initGlobalKeys();
+  }
 
-  WebSections() : getHeaderComponent = false;
+  static WebSectionsHelper get instance => _instance;
 
-  WebSections.header() : getHeaderComponent = true;
+  static final WebSectionsHelper _instance = WebSectionsHelper._();
 
-  List<WebSection> get sections => [
+  void initGlobalKeys() {
+    aboutSectionKey = GlobalKey();
+    statisticsSectionKey = GlobalKey();
+    workingProcessSectionKey = GlobalKey();
+    projectsSectionKey = GlobalKey();
+    contactUsSectionKey = GlobalKey();
+    footerSectionKey = GlobalKey();
+  }
+
+  late GlobalKey aboutSectionKey;
+
+  late GlobalKey statisticsSectionKey;
+
+  late GlobalKey workingProcessSectionKey;
+
+  late GlobalKey projectsSectionKey;
+
+  late GlobalKey contactUsSectionKey;
+
+  late GlobalKey footerSectionKey;
+
+  List<WebSection> sections({bool showHeaderComponent = false}) {
+    return [
+      WebSection(
+        globalKey: aboutSectionKey,
+        title: 'About Me',
+        widget: const AboutSection(),
+      ),
+      WebSection(
+        globalKey: statisticsSectionKey,
+        title: 'Experience',
+        widget: const StatisticsSection(),
+      ),
+      WebSection(
+        globalKey: workingProcessSectionKey,
+        title: 'Process',
+        widget: const WorkingProcessSection(),
+      ),
+      WebSection(
+        globalKey: projectsSectionKey,
+        title: 'Projects',
+        widget: const ProjectsSection(),
+      ),
+      if (!showHeaderComponent)
         WebSection(
-          title: 'About Me',
-          widget: const AboutSection(),
-          onTap: () {},
+          globalKey: contactUsSectionKey,
+          title: 'Contact Me',
+          widget: const ContactUsSection(),
         ),
+      if (!showHeaderComponent)
         WebSection(
-          title: 'Experience',
-          widget: const StatisticsSection(),
-          onTap: () {},
+          globalKey: footerSectionKey,
+          title: 'Footer',
+          widget: const FooterSections(),
         ),
-        WebSection(
-          title: 'Process',
-          widget: const WorkingProcessSection(),
-          onTap: () {},
-        ),
-        WebSection(
-          title: 'Projects',
-          widget: const ProjectsSection(),
-          onTap: () {},
-        ),
-        if (!getHeaderComponent)
-          WebSection(
-            title: 'Contact Me',
-            widget: const ContactUsSection(),
-            onTap: () {},
-          ),
-        if (!getHeaderComponent)
-          WebSection(
-            title: 'Footer',
-            widget: const FooterSections(),
-            onTap: () {},
-          ),
-      ];
+    ];
+  }
 }

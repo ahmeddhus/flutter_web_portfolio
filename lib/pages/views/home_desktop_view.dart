@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/data/web_sections.dart';
-import 'package:flutter_web_portfolio/models/web_section.dart';
+import 'package:flutter_web_portfolio/models/web_section_helper.dart';
 import 'package:flutter_web_portfolio/pages/sections/header/header_section.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 
 class HomeDesktopView extends StatelessWidget {
-  const HomeDesktopView({
-    Key? key,
-  }) : super(key: key);
+  const HomeDesktopView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,9 +62,14 @@ class HomeDesktopView extends StatelessWidget {
               actions: [
                 Row(
                   children: [
-                    ...WebSections.header().sections.map(
+                    ...WebSectionsHelper.instance.sections(showHeaderComponent: true).map(
                           (WebSection e) => TextButton(
-                            onPressed: e.onTap,
+                            onPressed: () {
+                              Scrollable.ensureVisible(
+                                e.globalKey.currentContext!,
+                                duration: const Duration(seconds: 1),
+                              );
+                            },
                             child: Text(
                               e.title,
                               style: const TextStyle(
@@ -78,7 +81,12 @@ class HomeDesktopView extends StatelessWidget {
                         ),
                     const SizedBox(width: 20),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Scrollable.ensureVisible(
+                          WebSectionsHelper.instance.contactUsSectionKey.currentContext!,
+                          duration: const Duration(seconds: 1),
+                        );
+                      },
                       style: AppStyles.textButtonStyle,
                       child: const Text(
                         'Contact Me',
@@ -93,8 +101,11 @@ class HomeDesktopView extends StatelessWidget {
                 SizedBox(width: MediaQuery.of(context).size.width * .15),
               ],
             ),
-            ...WebSections().sections.map(
-                  (WebSection e) => SliverToBoxAdapter(child: e.widget),
+            ...WebSectionsHelper.instance.sections().map(
+                  (WebSection e) => SliverToBoxAdapter(
+                    key: e.globalKey,
+                    child: e.widget,
+                  ),
                 ),
           ],
         ),
