@@ -66,7 +66,7 @@ class HomeDesktopView extends StatelessWidget {
                   children: [
                     ...WebSections.header().sections.map(
                           (WebSection e) => TextButton(
-                            onPressed: () {},
+                            onPressed: e.onTap,
                             child: Text(
                               e.title,
                               style: const TextStyle(
