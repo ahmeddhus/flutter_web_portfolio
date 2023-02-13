@@ -37,14 +37,12 @@ class WebSections {
         if (!getHeaderComponent)
           WebSection(
             title: 'Contact Me',
-            coloredButton: true,
             widget: const ContactUsSection(),
             onTap: () {},
           ),
         if (!getHeaderComponent)
           WebSection(
             title: 'Footer',
-            showInHeaderBar: false,
             widget: const FooterSections(),
             onTap: () {},
           ),
