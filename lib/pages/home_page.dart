@@ -12,7 +12,7 @@ import 'package:flutter_web_portfolio/pages/sections/working_process/working_pro
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  List<Widget> _sections() => [
+  List<Widget> get _sections => [
         const SliverToBoxAdapter(
           child: AboutSection(),
         ),
@@ -36,8 +36,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
-      desktopScreen: HomeDesktopView(sections: _sections()),
-      mobileScreen: HomeMobileView(sections: _sections()),
+      desktopScreen: HomeDesktopView(sections: _sections),
+      mobileScreen: HomeMobileView(sections: _sections),
     );
   }
 }
