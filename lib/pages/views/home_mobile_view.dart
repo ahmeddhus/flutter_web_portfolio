@@ -161,7 +161,9 @@ class HomeMobileView extends StatelessWidget {
                 child: HeaderSection(),
               ),
             ),
-            ...sections,
+            ...sections.map(
+              (Widget e) => SliverToBoxAdapter(child: e),
+            ),
           ],
         ),
       ),

@@ -121,7 +121,9 @@ class HomeDesktopView extends StatelessWidget {
                 SizedBox(width: MediaQuery.of(context).size.width * .15),
               ],
             ),
-            ...sections,
+            ...sections.map(
+              (Widget e) => SliverToBoxAdapter(child: e),
+            ),
           ],
         ),
       ),
