@@ -6,7 +6,7 @@ import 'package:flutter_web_portfolio/pages/sections/projects/projects_section.d
 import 'package:flutter_web_portfolio/pages/sections/statistics/statistics_section.dart';
 import 'package:flutter_web_portfolio/pages/sections/working_process/working_process_section.dart';
 
-mixin WebConstants {
+mixin WebComponents {
   static const List<Widget> sections = [
     AboutSection(),
     StatisticsSection(),
