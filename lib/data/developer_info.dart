@@ -28,6 +28,8 @@ mixin DeveloperInfo {
 
   static const String medium = 'https://medium.com/@ahmeddhus';
 
+  static const String stackoverflow = 'https://stackoverflow.com/users/6694858/ahmed-hussein';
+
   static const String youtube = 'https://www.youtube.com/@groovex7470';
 
   static const String cv =
@@ -51,9 +53,14 @@ mixin DeveloperInfo {
       url: DeveloperInfo.medium,
     ),
     Website(
-      iconPath: 'icons/youtube.png',
-      url: DeveloperInfo.youtube,
+      iconPath: 'icons/stackoverflow.png',
+      url: DeveloperInfo.stackoverflow,
     ),
+    /// Uncomment the following code to add YouTube channel
+    // Website(
+    //   iconPath: 'icons/youtube.png',
+    //   url: DeveloperInfo.youtube,
+    // ),
   ];
 
   static final List<ContactInfo> contactInfo = [
