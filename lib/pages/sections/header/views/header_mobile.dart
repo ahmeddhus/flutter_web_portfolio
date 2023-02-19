@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_portfolio/pages/sections/footer/widgets/footer_social_item.dart';
 import 'package:flutter_web_portfolio/theme/app_styles.dart';
 import 'package:flutter_web_portfolio/theme/colors.dart';
 import 'package:flutter_web_portfolio/data/developer_info.dart';
@@ -38,7 +39,7 @@ class HeaderMobile extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: Text(
                 DeveloperInfo.description,
-                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: Colors.grey[100],
                   fontSize: 15,
                   height: 1.8,
@@ -46,7 +47,7 @@ class HeaderMobile extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
             ElevatedButton(
               style: AppStyles.elevatedButtonYellowStyle,
               onPressed: LauncherMethods.downloadCV,
@@ -55,7 +56,14 @@ class HeaderMobile extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
             ),
-            const SizedBox(height: 100),
+            const SizedBox(height: 30),
+            Row(
+                children: DeveloperInfo.websites
+                    .map((e) => FooterSocialItem(
+                  website: e,
+                ))
+                    .toList()),
+            const SizedBox(height: 50),
           ],
         ),
       ),
