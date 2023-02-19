@@ -39,7 +39,7 @@ class HeaderMobile extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: Text(
                 DeveloperInfo.description,
-                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: Colors.grey[100],
                   fontSize: 15,
                   height: 1.8,

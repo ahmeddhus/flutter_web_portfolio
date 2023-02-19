@@ -47,7 +47,7 @@ class AboutDesktop extends StatelessWidget {
                     ),
                     Text(
                       DeveloperInfo.description,
-                      style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: Colors.black.withOpacity(.7),
                         fontSize: 17,
                       ),
